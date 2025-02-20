@@ -187,6 +187,9 @@ export default function Home() {
               cursor: "pointer",
               "&:hover": {
                 bgcolor: "#c2f0d3",
+                "& .result": {
+                  bgcolor: "#91e3ac",
+                },
               },
             }}
             spacing={2}
@@ -222,7 +225,7 @@ export default function Home() {
                 label=""
               />
 
-              <Stack direction="column" spacing={2} p={1} bgcolor="#bbb">
+              <Stack direction="column" spacing={2} p={1} bgcolor="#ddd" className="result">
                 <Stack
                   direction="row"
                   justifyContent="space-between"
