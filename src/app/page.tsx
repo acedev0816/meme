@@ -45,7 +45,7 @@ export default function Home() {
 
         {/* Subtitle */}
         <Typography variant="h5" sx={{ mb: 4 }}>
-          Earn Solana rewards every 5 minutes just by holding $LUG tokens
+          Earn USDC rewards every 5 minutes just by holding $LUG tokens
         </Typography>
 
         {/* Buttons row */}
@@ -88,11 +88,11 @@ export default function Home() {
             mt: "80px!important",
           }}
         >
-          Automatic Solana Rewards
+          Automatic USDC Rewards
         </Typography>
 
         <Typography variant="h6" sx={{ fontFamily: "monospace" }}>
-          Every 5 minutes, holders receive Solana rewards automatically
+          Every 5 minutes, holders receive USDC rewards automatically
           distributed to their wallets _
         </Typography>
 
@@ -360,7 +360,7 @@ export default function Home() {
             </Typography>
           </Stack>
 
-          {/* Solana Rewards */}
+          {/* USDC Rewards */}
           <Stack
             sx={{
               flex: 1,
@@ -382,10 +382,10 @@ export default function Home() {
               variant="h6"
               sx={{ fontWeight: "bold", textAlign: "center" }}
             >
-              Solana Rewards
+              USDC Rewards
             </Typography>
             <Typography sx={{ textAlign: "center" }}>
-              Earn Solana just by holding $LUG tokens in your wallet
+              Earn USDC just by holding $LUG tokens in your wallet
             </Typography>
           </Stack>
 
@@ -592,7 +592,7 @@ export default function Home() {
           <Typography sx={{ textAlign: "center" }}>
             100% of the total supply is added to liquidity at launch, with no
             team tokens, no presale, and no max wallet limits. The 5% tax on
-            transactions is automatically distributed as Solana rewards to all
+            transactions is automatically distributed as USDC rewards to all
             holders every 5 minutes.
           </Typography>
         </Stack>
