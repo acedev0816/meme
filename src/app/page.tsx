@@ -122,7 +122,7 @@ export default function Home() {
             >
               [How_It_Works]
             </Typography>
-            <Stack spacing={2} sx={{ textAlign: "left" }}>
+            <Stack spacing={2} sx={{ textAlign: "center" }}>
               <Typography>
                 {">"} 5% tax is collected from every buy and sell transaction
               </Typography>
@@ -160,7 +160,7 @@ export default function Home() {
             >
               [Benefits]
             </Typography>
-            <Stack spacing={2} sx={{ textAlign: "left" }}>
+            <Stack spacing={2} sx={{ textAlign: "center" }}>
               <Typography>
                 {"[+]"} Earn passive income in Solana just by holding
               </Typography>
@@ -281,16 +281,16 @@ export default function Home() {
             }}
             spacing={2}
           >
-            <Typography variant="h5" sx={{ mb: 1, textAlign: "left" }}>
+            <Typography variant="h5" sx={{ mb: 1, textAlign: "center" }}>
               {">"}_
             </Typography>
             <Typography
               variant="h6"
-              sx={{ fontWeight: "bold", textAlign: "left" }}
+              sx={{ fontWeight: "bold", textAlign: "center" }}
             >
               5% Tax Distribution
             </Typography>
-            <Typography sx={{ textAlign: "left" }}>
+            <Typography sx={{ textAlign: "center" }}>
               Every buy and sell transaction contributes to the reward pool
             </Typography>
           </Stack>
@@ -310,16 +310,16 @@ export default function Home() {
             }}
             spacing={2}
           >
-            <Typography variant="h5" sx={{ mb: 1, textAlign: "left" }}>
+            <Typography variant="h5" sx={{ mb: 1, textAlign: "center" }}>
               [&nbsp;]
             </Typography>
             <Typography
               variant="h6"
-              sx={{ fontWeight: "bold", textAlign: "left" }}
+              sx={{ fontWeight: "bold", textAlign: "center" }}
             >
               Auto-Claim System
             </Typography>
-            <Typography sx={{ textAlign: "left" }}>
+            <Typography sx={{ textAlign: "center" }}>
               Rewards are automatically distributed every 5 minutes
             </Typography>
           </Stack>
@@ -339,16 +339,16 @@ export default function Home() {
             }}
             spacing={2}
           >
-            <Typography variant="h5" sx={{ mb: 1, textAlign: "left" }}>
+            <Typography variant="h5" sx={{ mb: 1, textAlign: "center" }}>
               $_
             </Typography>
             <Typography
               variant="h6"
-              sx={{ fontWeight: "bold", textAlign: "left" }}
+              sx={{ fontWeight: "bold", textAlign: "center" }}
             >
               Solana Rewards
             </Typography>
-            <Typography sx={{ textAlign: "left" }}>
+            <Typography sx={{ textAlign: "center" }}>
               Earn Solana just by holding $IMG tokens in your wallet
             </Typography>
           </Stack>
@@ -368,16 +368,16 @@ export default function Home() {
             }}
             spacing={2}
           >
-            <Typography variant="h5" sx={{ mb: 1, textAlign: "left" }}>
+            <Typography variant="h5" sx={{ mb: 1, textAlign: "center" }}>
               //
             </Typography>
             <Typography
               variant="h6"
-              sx={{ fontWeight: "bold", textAlign: "left" }}
+              sx={{ fontWeight: "bold", textAlign: "center" }}
             >
               Fair Launch
             </Typography>
-            <Typography sx={{ textAlign: "left" }}>
+            <Typography sx={{ textAlign: "center" }}>
               No pre-sale, no team tokens, 100% fair distribution
             </Typography>
           </Stack>
