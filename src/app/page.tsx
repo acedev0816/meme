@@ -7,11 +7,12 @@ import {
   Container,
   InputAdornment,
   OutlinedInput,
+  Box,
 } from "@mui/material";
 
 export default function Home() {
   return (
-    <Container sx={{ bgcolor: 'black', color: '#FFE44D', minHeight: '100vh' }}>
+    <Container sx={{ bgcolor: "black", color: "#FFE44D", minHeight: "100vh" }}>
       <Stack
         spacing={4}
         alignItems="center"
@@ -27,7 +28,7 @@ export default function Home() {
             borderRadius: "24px",
           }}
         >
-          IMG
+          LUG
         </Typography>
 
         {/* Main title */}
@@ -39,7 +40,7 @@ export default function Home() {
             textShadow: "0 0 10px rgba(255,255,255,0.5)",
           }}
         >
-          Infinite Money Glitch
+          Limitless USDC Generator
         </Typography>
 
         {/* Subtitle */}
@@ -59,20 +60,20 @@ export default function Home() {
             variant="outlined"
             sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
-            <Icon icon="mdi:chart-box" width={30} color="#FFE44D"/>
+            <Icon icon="mdi:chart-box" width={30} color="#FFE44D" />
             &nbsp;Chart
           </Button>
           <Button
             variant="outlined"
             sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
-            <Icon icon="mdi:twitter" width={30} color="#FFE44D"/>
+            <Icon icon="mdi:twitter" width={30} color="#FFE44D" />
           </Button>
           <Button
             variant="outlined"
             sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
-            <Icon icon="mdi:telegram" width={30} color="#FFE44D"/>
+            <Icon icon="mdi:telegram" width={30} color="#FFE44D" />
           </Button>
         </Stack>
 
@@ -111,13 +112,13 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
           >
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
             >
               [How_It_Works]
@@ -149,13 +150,13 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
           >
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
             >
               [Benefits]
@@ -186,28 +187,38 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
-                "& .result": {
-                  bgcolor: "#91e3ac",
-                },
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
           >
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
             >
               [Rewards_Calculator]
             </Typography>
             <Stack spacing={2} sx={{ fontFamily: "monospace" }}>
-              <Typography textAlign="left">24h Volume (USD)</Typography>
+              <Typography textAlign="left">Your $IMG Holdings</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
                 startAdornment={
-                  <InputAdornment position="start">$</InputAdornment>
+                  <InputAdornment position="start" sx={{ fontWeight: "bold" }}>
+                    <span style={{ color: "#FFE44D" }}>$</span>
+                  </InputAdornment>
                 }
                 label=""
+                sx={{
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FFE44D",
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FFE44D",
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FFE44D",
+                  },
+                }}
               />
               <Typography
                 sx={{ display: "flex", justifyContent: "space-between" }}
@@ -220,19 +231,38 @@ export default function Home() {
               <OutlinedInput
                 id="outlined-adornment-amount"
                 startAdornment={
-                  <InputAdornment position="start">$</InputAdornment>
+                  <InputAdornment position="start" sx={{ fontWeight: "bold" }}>
+                    <span style={{ color: "#FFE44D" }}>$</span>
+                  </InputAdornment>
                 }
                 label=""
+                sx={{
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FFE44D",
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FFE44D",
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#FFE44D",
+                  },
+                }}
               />
 
-              <Stack direction="column" spacing={2} p={1} bgcolor="#333" className="result">
+              <Stack
+                direction="column"
+                spacing={2}
+                p={1}
+                bgcolor="#333"
+                className="result"
+              >
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
                 >
                   <Typography>Daily Rewards Pool:</Typography>
-                  <Typography sx={{ color: "primary.dark" }}>$5,000</Typography>
+                  <Typography sx={{ color: "#FFE44D" }}>$5,000</Typography>
                 </Stack>
 
                 <Stack
@@ -241,7 +271,7 @@ export default function Home() {
                   alignItems="center"
                 >
                   <Typography>Your Daily Earnings:</Typography>
-                  <Typography sx={{ color: "primary.dark" }}>$5</Typography>
+                  <Typography sx={{ color: "#FFE44D" }}>$5</Typography>
                 </Stack>
               </Stack>
             </Stack>
@@ -276,7 +306,7 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
@@ -305,7 +335,7 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
@@ -334,7 +364,7 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
@@ -363,7 +393,7 @@ export default function Home() {
               border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#333",
+                bgcolor: "#2b2b2b",
               },
             }}
             spacing={2}
@@ -397,18 +427,24 @@ export default function Home() {
         </Typography>
 
         {/* Stats Grid */}
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          spacing={4}
-          sx={{ width: "100%", mb: 4 }}
+        <Box  
+          display="grid"
+          gridTemplateColumns="repeat(2, 1fr)"
+          gap={4}
+          sx={{ 
+            width: "100%", 
+            mb: 4,
+            '& > *': {
+              minWidth: 0, // Prevents overflow
+            }
+          }}
         >
           {/* Total Supply */}
           <Stack
             sx={{
-              flex: 1,
               borderRadius: 2,
-              p: 3,
-              bgcolor: "#222",
+              p: {xs:1, sm:3},
+              bgcolor: "#222", 
               border: "1px solid #444",
               cursor: "pointer",
             }}
@@ -422,6 +458,8 @@ export default function Home() {
               sx={{
                 fontWeight: "bold",
                 textShadow: "0 0 10px rgba(255,255,255,0.5)",
+                fontSize: { xs: "2rem", sm: "3rem" },
+                wordWrap: "break-word",
               }}
             >
               1,000,000,000
@@ -434,11 +472,10 @@ export default function Home() {
           {/* Initial Liquidity */}
           <Stack
             sx={{
-              flex: 1,
               borderRadius: 2,
-              p: 3,
+              p: {xs:1, sm:3},
               bgcolor: "#222",
-              border: "1px solid #444",
+              border: "1px solid #444", 
               cursor: "pointer",
             }}
             spacing={2}
@@ -451,6 +488,8 @@ export default function Home() {
               sx={{
                 fontWeight: "bold",
                 textShadow: "0 0 10px rgba(255,255,255,0.5)",
+                fontSize: { xs: "2rem", sm: "3rem" },
+                wordWrap: "break-word",
               }}
             >
               100%
@@ -463,9 +502,8 @@ export default function Home() {
           {/* Tax */}
           <Stack
             sx={{
-              flex: 1,
               borderRadius: 2,
-              p: 3,
+              p: {xs:1, sm:3},
               bgcolor: "#222",
               border: "1px solid #444",
               cursor: "pointer",
@@ -480,6 +518,8 @@ export default function Home() {
               sx={{
                 fontWeight: "bold",
                 textShadow: "0 0 10px rgba(255,255,255,0.5)",
+                fontSize: { xs: "2rem", sm: "3rem" },
+                wordWrap: "break-word",
               }}
             >
               5%
@@ -492,9 +532,8 @@ export default function Home() {
           {/* Fair Launch */}
           <Stack
             sx={{
-              flex: 1,
               borderRadius: 2,
-              p: 3,
+              p: {xs:1, sm:3},
               bgcolor: "#222",
               border: "1px solid #444",
               cursor: "pointer",
@@ -509,6 +548,8 @@ export default function Home() {
               sx={{
                 fontWeight: "bold",
                 textShadow: "0 0 10px rgba(255,255,255,0.5)",
+                fontSize: { xs: "2rem", sm: "3rem" },
+                wordWrap: "break-word",
               }}
             >
               100%
@@ -517,17 +558,18 @@ export default function Home() {
               Fair Launch
             </Typography>
           </Stack>
-        </Stack>
+        </Box>
 
         {/* True Fair Launch Box */}
         <Stack
           sx={{
             borderRadius: 2,
-            p: 4,
             bgcolor: "#222",
             border: "1px solid #444",
             cursor: "pointer",
-            width: { xs: "100%", md: "80%" },
+            width: { xs: "100%", md: "60%" },
+            p: 3,
+            boxSizing: "border-box",
           }}
           spacing={2}
         >
