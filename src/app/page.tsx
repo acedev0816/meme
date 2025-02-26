@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <Container>
+    <Container sx={{ bgcolor: 'black', color: '#FFD700', minHeight: '100vh' }}>
       <Stack
         spacing={4}
         alignItems="center"
@@ -21,8 +21,8 @@ export default function Home() {
         <Typography
           variant="button"
           sx={{
-            color: "#00ff00",
-            border: "2px solid #00ff00",
+            color: "#FFD700",
+            border: "2px solid #FFD700",
             padding: "8px 24px",
             borderRadius: "24px",
           }}
@@ -107,11 +107,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#c2f0d3",
+                bgcolor: "#333",
               },
             }}
             spacing={2}
@@ -145,11 +145,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#c2f0d3",
+                bgcolor: "#333",
               },
             }}
             spacing={2}
@@ -182,11 +182,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#c2f0d3",
+                bgcolor: "#333",
                 "& .result": {
                   bgcolor: "#91e3ac",
                 },
@@ -225,7 +225,7 @@ export default function Home() {
                 label=""
               />
 
-              <Stack direction="column" spacing={2} p={1} bgcolor="#ddd" className="result">
+              <Stack direction="column" spacing={2} p={1} bgcolor="#333" className="result">
                 <Stack
                   direction="row"
                   justifyContent="space-between"
@@ -272,11 +272,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#ddd",
+                bgcolor: "#333",
               },
             }}
             spacing={2}
@@ -301,11 +301,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#ddd",
+                bgcolor: "#333",
               },
             }}
             spacing={2}
@@ -330,11 +330,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#ddd",
+                bgcolor: "#333",
               },
             }}
             spacing={2}
@@ -359,11 +359,11 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
               "&:hover": {
-                bgcolor: "#ddd",
+                bgcolor: "#333",
               },
             }}
             spacing={2}
@@ -408,8 +408,8 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
             }}
             spacing={2}
@@ -437,8 +437,8 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
             }}
             spacing={2}
@@ -466,8 +466,8 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
             }}
             spacing={2}
@@ -495,8 +495,8 @@ export default function Home() {
               flex: 1,
               borderRadius: 2,
               p: 3,
-              bgcolor: "#eee",
-              border: "1px solid #aaa",
+              bgcolor: "#222",
+              border: "1px solid #444",
               cursor: "pointer",
             }}
             spacing={2}
@@ -524,8 +524,8 @@ export default function Home() {
           sx={{
             borderRadius: 2,
             p: 4,
-            bgcolor: "#eee",
-            border: "1px solid #aaa",
+            bgcolor: "#222",
+            border: "1px solid #444",
             cursor: "pointer",
             width: { xs: "100%", md: "80%" },
           }}
