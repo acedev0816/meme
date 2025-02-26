@@ -50,29 +50,29 @@ export default function Home() {
         {/* Buttons row */}
         <Stack direction="row" spacing={2}>
           <Button
-            variant="contained"
-            sx={{ color: "white", borderColor: "white" }}
+            variant="outlined"
+            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
           >
             Buy Now
           </Button>
           <Button
-            variant="contained"
-            sx={{ color: "white", borderColor: "white" }}
+            variant="outlined"
+            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
           >
-            <Icon icon="mdi:chart-box" />
+            <Icon icon="mdi:chart-box" width={30} color="#FFD700"/>
             &nbsp;Chart
           </Button>
           <Button
-            variant="contained"
-            sx={{ color: "white", borderColor: "white" }}
+            variant="outlined"
+            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
           >
-            <Icon icon="mdi:twitter" />
+            <Icon icon="mdi:twitter" width={30} color="#FFD700"/>
           </Button>
           <Button
-            variant="contained"
-            sx={{ color: "white", borderColor: "white" }}
+            variant="outlined"
+            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
           >
-            <Icon icon="mdi:telegram" />
+            <Icon icon="mdi:telegram" width={30} color="#FFD700"/>
           </Button>
         </Stack>
 
