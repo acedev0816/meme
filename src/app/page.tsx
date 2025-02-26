@@ -45,7 +45,7 @@ export default function Home() {
 
         {/* Subtitle */}
         <Typography variant="h5" sx={{ mb: 4 }}>
-          Earn Solana rewards every 5 minutes just by holding $IMG tokens
+          Earn Solana rewards every 5 minutes just by holding $LUG tokens
         </Typography>
 
         {/* Buttons row */}
@@ -199,7 +199,7 @@ export default function Home() {
               [Rewards_Calculator]
             </Typography>
             <Stack spacing={2} sx={{ fontFamily: "monospace" }}>
-              <Typography textAlign="left">Your $IMG Holdings</Typography>
+              <Typography textAlign="left">Your $LUG Holdings</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
                 startAdornment={
@@ -218,6 +218,9 @@ export default function Home() {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "#FFE44D",
                   },
+                  input: {
+                    color: "#FFE44D"
+                  }
                 }}
               />
               <Typography
@@ -227,7 +230,7 @@ export default function Home() {
                 <span>$100,000</span>
               </Typography>
 
-              <Typography textAlign="left">Your $IMG Holdings</Typography>
+              <Typography textAlign="left">Your $LUG Holdings</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
                 startAdornment={
@@ -246,6 +249,9 @@ export default function Home() {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "#FFE44D",
                   },
+                  input: {
+                    color: "#FFE44D"
+                  }
                 }}
               />
 
@@ -288,7 +294,7 @@ export default function Home() {
             mb: "20px!important",
           }}
         >
-          Why Choose $IMG?
+          Why Choose $LUG?
         </Typography>
 
         <Stack
@@ -379,7 +385,7 @@ export default function Home() {
               Solana Rewards
             </Typography>
             <Typography sx={{ textAlign: "center" }}>
-              Earn Solana just by holding $IMG tokens in your wallet
+              Earn Solana just by holding $LUG tokens in your wallet
             </Typography>
           </Stack>
 
