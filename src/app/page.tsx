@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <Container sx={{ bgcolor: 'black', color: '#FFD700', minHeight: '100vh' }}>
+    <Container sx={{ bgcolor: 'black', color: '#FFE44D', minHeight: '100vh' }}>
       <Stack
         spacing={4}
         alignItems="center"
@@ -21,8 +21,8 @@ export default function Home() {
         <Typography
           variant="button"
           sx={{
-            color: "#FFD700",
-            border: "2px solid #FFD700",
+            color: "#FFE44D",
+            border: "2px solid #FFE44D",
             padding: "8px 24px",
             borderRadius: "24px",
           }}
@@ -51,28 +51,28 @@ export default function Home() {
         <Stack direction="row" spacing={2}>
           <Button
             variant="outlined"
-            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
+            sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
             Buy Now
           </Button>
           <Button
             variant="outlined"
-            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
+            sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
-            <Icon icon="mdi:chart-box" width={30} color="#FFD700"/>
+            <Icon icon="mdi:chart-box" width={30} color="#FFE44D"/>
             &nbsp;Chart
           </Button>
           <Button
             variant="outlined"
-            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
+            sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
-            <Icon icon="mdi:twitter" width={30} color="#FFD700"/>
+            <Icon icon="mdi:twitter" width={30} color="#FFE44D"/>
           </Button>
           <Button
             variant="outlined"
-            sx={{ color: "#FFD700", borderColor: "#FFD700" }}
+            sx={{ color: "#FFE44D", borderColor: "#FFE44D" }}
           >
-            <Icon icon="mdi:telegram" width={30} color="#FFD700"/>
+            <Icon icon="mdi:telegram" width={30} color="#FFE44D"/>
           </Button>
         </Stack>
 
