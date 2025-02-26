@@ -128,10 +128,10 @@ export default function Home() {
                 {">"} 5% tax is collected from every buy and sell transaction
               </Typography>
               <Typography>
-                {">"} Tax is automatically converted to Solana
+                {">"} Tax is automatically converted to USDC
               </Typography>
               <Typography>
-                {">"} Smart contract distributes Solana to all holders every 5
+                {">"} Smart contract distributes USDC to all holders every 5
                 minutes
               </Typography>
               <Typography>
@@ -163,7 +163,7 @@ export default function Home() {
             </Typography>
             <Stack spacing={2} sx={{ textAlign: "center" }}>
               <Typography>
-                {"[+]"} Earn passive income in Solana just by holding
+                {"[+]"} Earn passive income in USDC just by holding
               </Typography>
               <Typography>
                 {"[+]"} No need to claim - rewards are automatic
