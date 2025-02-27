@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Token",
-  description: "My Token",
+  title: "Limitless USDC Generator",
+  description: "Generate unlimited USDC",
 };
 
 export default function RootLayout({
