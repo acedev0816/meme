@@ -13,8 +13,8 @@ import {
 import { useState } from "react";
 
 export default function Home() {
-  const [volume, setVolume] = useState(0);
-  const [holdings, setHoldings] = useState(0);
+  const [volume, setVolume] = useState(100000);
+  const [holdings, setHoldings] = useState(1000000);
 
   return (
     <Container sx={{ bgcolor: "black", color: "#FFE44D", minHeight: "100vh" }}>
@@ -208,13 +208,13 @@ export default function Home() {
             <Stack spacing={2} sx={{ fontFamily: "monospace" }}>
               <Typography textAlign="left">24h Volume (USD)</Typography>
               <OutlinedInput
+                value={volume?.toLocaleString() || ''}
                 id="outlined-adornment-amount"
                 startAdornment={
                   <InputAdornment position="start" sx={{ fontWeight: "bold" }}>
                     <span style={{ color: "#FFE44D" }}>$</span>
                   </InputAdornment>
                 }
-                value={volume || ''}
                 onChange={(e) => {
                   const val = e.target.value;
                   console.log(val);
@@ -262,7 +262,7 @@ export default function Home() {
                     <span style={{ color: "#FFE44D" }}>$</span>
                   </InputAdornment>
                 }
-                value={holdings || ""}
+                value={holdings?.toLocaleString() || ""}
                 onChange={(e) => {
                   const val = e.target.value;
                   setHoldings(Number(val.replace(/^0+/, "")));
