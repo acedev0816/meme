@@ -210,6 +210,11 @@ export default function Home() {
               <OutlinedInput
                 value={volume?.toLocaleString() || ''}
                 id="outlined-adornment-amount"
+                startAdornment={
+                  <InputAdornment position="start" sx={{ fontWeight: "bold" }}>
+                    <span style={{ color: "#FFE44D" }}>$</span>
+                  </InputAdornment>
+                }
                 onChange={(e) => {
                   const val = e.target.value;
                   if (val == "") {
@@ -254,11 +259,6 @@ export default function Home() {
               <Typography textAlign="left">Your $LUG Holdings</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
-                startAdornment={
-                  <InputAdornment position="start" sx={{ fontWeight: "bold" }}>
-                    <span style={{ color: "#FFE44D" }}>$</span>
-                  </InputAdornment>
-                }
                 value={holdings?.toLocaleString() || ""}
                 onChange={(e) => {
                   const val = e.target.value; 
