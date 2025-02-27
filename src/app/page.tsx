@@ -8,9 +8,14 @@ import {
   InputAdornment,
   OutlinedInput,
   Box,
+  LinearProgress,
 } from "@mui/material";
+import { useState } from "react";
 
 export default function Home() {
+  const [volume, setVolume] = useState(0);
+  const [holdings, setHoldings] = useState(0);
+
   return (
     <Container sx={{ bgcolor: "black", color: "#FFE44D", minHeight: "100vh" }}>
       <Stack
@@ -102,78 +107,80 @@ export default function Home() {
           spacing={4}
           sx={{ mt: 8, width: "100%" }}
         >
-          {/* How It Works */}
-          <Stack
-            sx={{
-              flex: 1,
-              borderRadius: 2,
-              p: 3,
-              bgcolor: "#222",
-              border: "1px solid #444",
-              cursor: "pointer",
-              "&:hover": {
-                bgcolor: "#2b2b2b",
-              },
-            }}
-            spacing={2}
-          >
-            <Typography
-              variant="h5"
-              sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
+          <Stack direction="column" spacing={2}>
+            {/* How It Works */}
+            <Stack
+              sx={{
+                flex: 1,
+                borderRadius: 2,
+                p: 3,
+                bgcolor: "#222",
+                border: "1px solid #444",
+                cursor: "pointer",
+                "&:hover": {
+                  bgcolor: "#2b2b2b",
+                },
+              }}
+              spacing={2}
             >
-              [How_It_Works]
-            </Typography>
-            <Stack spacing={2} sx={{ textAlign: "center" }}>
-              <Typography>
-                {">"} 5% tax is collected from every buy and sell transaction
+              <Typography
+                variant="h5"
+                sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
+              >
+                [How_It_Works]
               </Typography>
-              <Typography>
-                {">"} Tax is automatically converted to USDC
-              </Typography>
-              <Typography>
-                {">"} Smart contract distributes USDC to all holders every 5
-                minutes
-              </Typography>
-              <Typography>
-                {">"} Rewards are proportional to your token holdings
-              </Typography>
+              <Stack spacing={2} sx={{ textAlign: "center" }}>
+                <Typography>
+                  {">"} 5% tax is collected from every buy and sell transaction
+                </Typography>
+                <Typography>
+                  {">"} Tax is automatically converted to USDC
+                </Typography>
+                <Typography>
+                  {">"} Smart contract distributes USDC to all holders every 5
+                  minutes
+                </Typography>
+                <Typography>
+                  {">"} Rewards are proportional to your token holdings
+                </Typography>
+              </Stack>
             </Stack>
-          </Stack>
 
-          {/* Benefits */}
-          <Stack
-            sx={{
-              flex: 1,
-              borderRadius: 2,
-              p: 3,
-              bgcolor: "#222",
-              border: "1px solid #444",
-              cursor: "pointer",
-              "&:hover": {
-                bgcolor: "#2b2b2b",
-              },
-            }}
-            spacing={2}
-          >
-            <Typography
-              variant="h5"
-              sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
+            {/* Benefits */}
+            <Stack
+              sx={{
+                flex: 1,
+                borderRadius: 2,
+                p: 3,
+                bgcolor: "#222",
+                border: "1px solid #444",
+                cursor: "pointer",
+                "&:hover": {
+                  bgcolor: "#2b2b2b",
+                },
+              }}
+              spacing={2}
             >
-              [Benefits]
-            </Typography>
-            <Stack spacing={2} sx={{ textAlign: "center" }}>
-              <Typography>
-                {"[+]"} Earn passive income in USDC just by holding
+              <Typography
+                variant="h5"
+                sx={{ textShadow: "0 0 10px rgba(255,255,255,0.5)" }}
+              >
+                [Benefits]
               </Typography>
-              <Typography>
-                {"[+]"} No need to claim - rewards are automatic
-              </Typography>
-              <Typography>
-                {"[+]"} Frequent 5-minute distribution cycles
-              </Typography>
-              <Typography>
-                {"[+]"} Higher trading volume means more rewards
-              </Typography>
+              <Stack spacing={2} sx={{ textAlign: "center" }}>
+                <Typography>
+                  {"[+]"} Earn passive income in USDC just by holding
+                </Typography>
+                <Typography>
+                  {"[+]"} No need to claim - rewards are automatic
+                </Typography>
+                <Typography>
+                  {"[+]"} Frequent 5-minute distribution cycles
+                </Typography>
+                <Typography>
+                  {"[+]"} Higher trading volume means more rewards
+                </Typography>
+              </Stack>
             </Stack>
           </Stack>
 
@@ -199,7 +206,7 @@ export default function Home() {
               [Rewards_Calculator]
             </Typography>
             <Stack spacing={2} sx={{ fontFamily: "monospace" }}>
-              <Typography textAlign="left">Your $LUG Holdings</Typography>
+              <Typography textAlign="left">24h Volume (USD)</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
                 startAdornment={
@@ -207,6 +214,16 @@ export default function Home() {
                     <span style={{ color: "#FFE44D" }}>$</span>
                   </InputAdornment>
                 }
+                value={volume || ''}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  console.log(val);
+                  if (val == "") {
+                    setVolume(0);
+                  } else if (val != "0") {
+                    setVolume(Number(val.replace(/^0+/, "")));
+                  }
+                }}
                 label=""
                 sx={{
                   "& .MuiOutlinedInput-notchedOutline": {
@@ -219,17 +236,24 @@ export default function Home() {
                     borderColor: "#FFE44D",
                   },
                   input: {
-                    color: "#FFE44D"
-                  }
+                    color: "#FFE44D",
+                  },
                 }}
+              />
+              <LinearProgress
+                sx={{
+                  "& .MuiLinearProgress-bar": { bgcolor: "#FFE44D" },
+                  bgcolor: "#444",
+                }}
+                value={volume / 10000}
+                variant="determinate"
               />
               <Typography
                 sx={{ display: "flex", justifyContent: "space-between" }}
               >
                 <span>$0</span>
-                <span>$100,000</span>
+                <span>$1M</span>
               </Typography>
-
               <Typography textAlign="left">Your $LUG Holdings</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
@@ -238,6 +262,11 @@ export default function Home() {
                     <span style={{ color: "#FFE44D" }}>$</span>
                   </InputAdornment>
                 }
+                value={holdings || ""}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  setHoldings(Number(val.replace(/^0+/, "")));
+                }}
                 label=""
                 sx={{
                   "& .MuiOutlinedInput-notchedOutline": {
@@ -250,11 +279,24 @@ export default function Home() {
                     borderColor: "#FFE44D",
                   },
                   input: {
-                    color: "#FFE44D"
-                  }
+                    color: "#FFE44D",
+                  },
                 }}
               />
-
+              <LinearProgress
+                sx={{
+                  "& .MuiLinearProgress-bar": { bgcolor: "#FFE44D" },
+                  bgcolor: "#444",
+                }}
+                value={holdings / 1000000000}
+                variant="determinate"
+              />
+              <Typography
+                sx={{ display: "flex", justifyContent: "space-between" }}
+              >
+                <span>$0</span>
+                <span>$1B</span>
+              </Typography>
               <Stack
                 direction="column"
                 spacing={2}
@@ -266,18 +308,36 @@ export default function Home() {
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
+                  sx={{ borderBottom: "1px solid #998B2E" }}
                 >
                   <Typography>Daily Rewards Pool:</Typography>
-                  <Typography sx={{ color: "#FFE44D" }}>$5,000</Typography>
+                  <Typography sx={{ color: "#FFE44D", fontWeight: "bold" }}>
+                    ${(volume * 0.05).toFixed(2).replace(/\.?0+$/, "")}
+                  </Typography>
                 </Stack>
 
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
+                  sx={{ borderBottom: "1px solid #998B2E" }}
                 >
                   <Typography>Your Daily Earnings:</Typography>
-                  <Typography sx={{ color: "#FFE44D" }}>$5</Typography>
+                  <Typography sx={{ color: "#FFE44D", fontWeight: "bold" }}>
+                    ${((volume * 0.05 * holdings) / 1000000000).toFixed(3).replace(/\.?0+$/, '')}
+                  </Typography>
+                </Stack>
+
+                <Stack
+                  direction="row"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  sx={{ borderBottom: "1px solid #998B2E" }}
+                >
+                  <Typography>Monthly Projection:</Typography>
+                  <Typography sx={{ color: "#FFE44D", fontWeight: "bold" }}>
+                    ${((volume * 0.05 * holdings) / 1000000000 * 30).toFixed(3).replace(/\.?0+$/, '')}
+                  </Typography>
                 </Stack>
               </Stack>
             </Stack>
@@ -433,24 +493,24 @@ export default function Home() {
         </Typography>
 
         {/* Stats Grid */}
-        <Box  
+        <Box
           display="grid"
           gridTemplateColumns="repeat(2, 1fr)"
           gap={4}
-          sx={{ 
-            width: "100%", 
+          sx={{
+            width: "100%",
             mb: 4,
-            '& > *': {
+            "& > *": {
               minWidth: 0, // Prevents overflow
-            }
+            },
           }}
         >
           {/* Total Supply */}
           <Stack
             sx={{
               borderRadius: 2,
-              p: {xs:1, sm:3},
-              bgcolor: "#222", 
+              p: { xs: 1, sm: 3 },
+              bgcolor: "#222",
               border: "1px solid #444",
               cursor: "pointer",
             }}
@@ -479,9 +539,9 @@ export default function Home() {
           <Stack
             sx={{
               borderRadius: 2,
-              p: {xs:1, sm:3},
+              p: { xs: 1, sm: 3 },
               bgcolor: "#222",
-              border: "1px solid #444", 
+              border: "1px solid #444",
               cursor: "pointer",
             }}
             spacing={2}
@@ -509,7 +569,7 @@ export default function Home() {
           <Stack
             sx={{
               borderRadius: 2,
-              p: {xs:1, sm:3},
+              p: { xs: 1, sm: 3 },
               bgcolor: "#222",
               border: "1px solid #444",
               cursor: "pointer",
@@ -539,7 +599,7 @@ export default function Home() {
           <Stack
             sx={{
               borderRadius: 2,
-              p: {xs:1, sm:3},
+              p: { xs: 1, sm: 3 },
               bgcolor: "#222",
               border: "1px solid #444",
               cursor: "pointer",
