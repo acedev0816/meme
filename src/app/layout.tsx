@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Limitless USDC Generator",
-  description: "Generate unlimited USDC",
+  title: "Wealth Is Next",
+  description: "Wealth Is Next",
 };
 
 export default function RootLayout({

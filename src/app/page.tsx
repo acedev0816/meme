@@ -33,7 +33,7 @@ export default function Home() {
             borderRadius: "24px",
           }}
         >
-          LUG
+          WIN
         </Typography>
 
         {/* Main title */}
@@ -45,12 +45,12 @@ export default function Home() {
             textShadow: "0 0 10px rgba(255,255,255,0.5)",
           }}
         >
-          Limitless USDC Generator
+          Wealth Is Next
         </Typography>
 
         {/* Subtitle */}
         <Typography variant="h5" sx={{ mb: 4 }}>
-          Earn USDC rewards every 5 minutes just by holding $LUG tokens
+          Earn USDC rewards every 5 minutes just by holding $WIN tokens
         </Typography>
 
         {/* Buttons row */}
@@ -256,7 +256,7 @@ export default function Home() {
                 <span>$0</span>
                 <span>$1M</span>
               </Typography>
-              <Typography textAlign="left">Your $LUG Holdings</Typography>
+              <Typography textAlign="left">Your $WIN Holdings</Typography>
               <OutlinedInput
                 id="outlined-adornment-amount"
                 value={holdings?.toLocaleString() || ""}
@@ -449,7 +449,7 @@ export default function Home() {
               USDC Rewards
             </Typography>
             <Typography sx={{ textAlign: "center" }}>
-              Earn USDC just by holding $LUG tokens in your wallet
+              Earn USDC just by holding $WIN tokens in your wallet
             </Typography>
           </Stack>
 
