@@ -210,11 +210,6 @@ export default function Home() {
               <OutlinedInput
                 value={volume?.toLocaleString() || ''}
                 id="outlined-adornment-amount"
-                startAdornment={
-                  <InputAdornment position="start" sx={{ fontWeight: "bold" }}>
-                    <span style={{ color: "#FFE44D" }}>$</span>
-                  </InputAdornment>
-                }
                 onChange={(e) => {
                   const val = e.target.value;
                   if (val == "") {
