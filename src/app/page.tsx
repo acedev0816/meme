@@ -217,11 +217,13 @@ export default function Home() {
                 }
                 onChange={(e) => {
                   const val = e.target.value;
-                  console.log(val);
                   if (val == "") {
                     setVolume(0);
-                  } else if (val != "0") {
-                    setVolume(Number(val.replace(/^0+/, "")));
+                  } else {
+                    const value = Number(val.replace(/^0+|,/g, ""));
+                    if (value) {
+                      setVolume(value);
+                    }
                   }
                 }}
                 label=""
@@ -264,8 +266,15 @@ export default function Home() {
                 }
                 value={holdings?.toLocaleString() || ""}
                 onChange={(e) => {
-                  const val = e.target.value;
-                  setHoldings(Number(val.replace(/^0+/, "")));
+                  const val = e.target.value; 
+                  if (val == "") {
+                    setHoldings(0);
+                  } else {
+                    const value = Number(val.replace(/^0+|,/g, ""));
+                    if (value) {
+                      setHoldings(value);
+                    }
+                  }
                 }}
                 label=""
                 sx={{
@@ -345,7 +354,7 @@ export default function Home() {
         </Stack>
 
         {/* Why Choose $IMG Section */}
-        <Typography
+        {/* <Typography
           variant="h2"
           sx={{
             fontSize: 48,
@@ -355,12 +364,12 @@ export default function Home() {
           }}
         >
           Why Choose $LUG?
-        </Typography>
+        </Typography> */}
 
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={4}
-          sx={{ width: "100%" }}
+          sx={{ width: "100%", display: "none" }}
         >
           {/* Tax Distribution */}
           <Stack
@@ -496,7 +505,7 @@ export default function Home() {
         <Box
           display="grid"
           gridTemplateColumns="repeat(2, 1fr)"
-          gap={4}
+          gap={2}
           sx={{
             width: "100%",
             mb: 4,
